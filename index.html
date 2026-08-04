@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sovereign Lab — Understanding humans. Building intelligence around them.</title>
+  <title>Sovereign Lab — Understanding people. Connecting possibilities. Building what helps.</title>
+  <meta name="description" content="Sovereign Lab is a human-centered innovation lab. We begin with people, then connect medicine, communication, and technology to build what helps." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -370,10 +371,14 @@
 
     .pillars {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       background: var(--border);
       margin-top: 56px;
+    }
+
+    @media (max-width: 900px) {
+      .pillars { grid-template-columns: repeat(2, 1fr); }
     }
 
     .pillar {
@@ -485,6 +490,84 @@
       position: relative;
     }
 
+    /* ─── IDEA SECTION ─── */
+    .idea-section {
+      padding: 96px 48px;
+      max-width: 780px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+    }
+
+    .idea-section .section-heading { max-width: 620px; }
+
+    .idea-question {
+      font-size: 1.15rem;
+      color: var(--white);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .idea-body p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 620px;
+      margin-bottom: 18px;
+    }
+
+    .idea-body strong { color: var(--white); font-weight: 500; }
+
+    /* ─── VISION ─── */
+    .vision-section {
+      border-top: 1px solid var(--border);
+      padding: 96px 48px;
+      text-align: center;
+    }
+
+    .vision-eyebrow {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 24px;
+    }
+
+    .vision-statement {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+      color: var(--white);
+    }
+
+    .vision-lines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .vision-lines span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .vision-lines span em {
+      font-style: normal;
+      color: var(--teal);
+    }
+
+    @media (max-width: 768px) {
+      .idea-section, .vision-section { padding: 64px 24px; }
+    }
+
     /* ─── FOOTER ─── */
     footer {
       border-top: 1px solid var(--border);
@@ -536,7 +619,7 @@
         padding: 16px 24px;
       }
 
-      .section, .mission-section, .founder-section {
+      .section, .mission-section, .founder-section, .idea-section, .vision-section {
         padding: 64px 24px;
       }
 
@@ -571,9 +654,10 @@
   <nav>
     <a href="/" class="nav-logo">Sovereign<span>Lab</span></a>
     <ul class="nav-links">
-      <li><a href="#products">Products</a></li>
-      <li><a href="#mission">Approach</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#approach">Approach</a></li>
       <li><a href="#founder">Founder</a></li>
+      <li><a href="#vision">Vision</a></li>
       <li><a href="mailto:hello@sovereignlab.co">Contact</a></li>
     </ul>
   </nav>
@@ -607,16 +691,16 @@
       </svg>
     </div>
 
-    <p class="hero-eyebrow">Sovereign Lab · Human-Centered Intelligence</p>
+    <p class="hero-eyebrow">Sovereign Lab · Human-Centered Innovation Lab</p>
     <h1 class="hero-title">
-      Understanding <em>humans.</em><br>Building <span class="accent-pink">intelligence</span> around them.
+      Understanding <em>people.</em><br>Connecting <span class="accent-pink">possibilities.</span><br>Building what helps.
     </h1>
     <p class="hero-sub">
-      We bring together medicine, human behavior, live observation, and artificial intelligence to create experiences that help people understand themselves more clearly.
+      We begin with people—their bodies, experiences, behavior, communication, challenges, and potential. We bring together human understanding, technology, and knowledge from different fields to create useful products and new experiences.
     </p>
     <div class="hero-cta">
-      <a href="#products" class="btn-primary">Explore our work</a>
-      <a href="#mission" class="btn-ghost">How we think</a>
+      <a href="#work" class="btn-primary">Explore our work</a>
+      <a href="#approach" class="btn-ghost">Our approach</a>
     </div>
   </section>
 
@@ -624,15 +708,15 @@
   <div class="mission-strip" aria-hidden="true">
     <div class="mission-item"><span class="mission-dot"></span><span>Body</span></div>
     <div class="mission-item"><span class="mission-dot" style="background:var(--pink)"></span><span>Mind</span></div>
-    <div class="mission-item"><span class="mission-dot"></span><span>Expression</span></div>
-    <div class="mission-item"><span class="mission-dot" style="background:var(--pink)"></span><span>AI as a Multiplier</span></div>
+    <div class="mission-item"><span class="mission-dot"></span><span>Connection</span></div>
+    <div class="mission-item"><span class="mission-dot" style="background:var(--pink)"></span><span>Technology</span></div>
     <div class="mission-item"><span class="mission-dot"></span><span>sovereignlab.co</span></div>
   </div>
 
   <!-- PRODUCTS -->
-  <section class="section" id="products">
-    <p class="section-label">Products</p>
-    <h2 class="section-heading">Our first explorations in human-centered intelligence</h2>
+  <section class="section" id="work">
+    <p class="section-label">Our Work</p>
+    <h2 class="section-heading">Different products may serve different people. They begin with the same question.</h2>
 
     <div class="products-grid">
       <!-- Hastareka -->
@@ -643,7 +727,7 @@
         </div>
         <h3 class="product-name">Hastareka</h3>
         <p class="product-desc">
-          An AI-powered palm interpretation experience that brings traditional palmistry into a modern, interactive format. Hastareka explores patterns, symbolism, personality themes, and self-reflection through the human hand.
+          An AI-powered palm interpretation experience that brings traditional palmistry into a modern, interactive format. It explores patterns, symbolism, personality themes, and self-reflection through the human hand—our first exploration of how human interpretation can become an accessible digital experience.
         </p>
         <span class="product-link">hastareka.com</span>
         <span class="product-bg-num">01</span>
@@ -657,7 +741,7 @@
         </div>
         <h3 class="product-name">MCQBrain</h3>
         <p class="product-desc">
-          An AI-assisted medical learning tool designed for clinical students. It turns multiple-choice practice into a more adaptive learning experience and helps learners strengthen clinical reasoning.
+          An AI-assisted medical learning tool designed for clinical students. MCQBrain helps learners practice, identify weak areas, and strengthen clinical reasoning through a more adaptive learning experience.
         </p>
   
         <span class="product-link">MCQBrain </span>
@@ -667,9 +751,15 @@
   </section>
 
   <!-- MISSION SECTION -->
-  <section class="mission-section" id="mission">
-    <p class="section-label">Our approach</p>
-    <h2 class="section-heading">Human understanding is fragmented. We build across the connections.</h2>
+  <section class="mission-section" id="approach">
+    <p class="section-label">Our Approach</p>
+    <h2 class="section-heading">Human problems are rarely limited to one field.</h2>
+    <p style="max-width:620px; color:var(--muted); font-size:0.95rem; line-height:1.85;">
+      Medicine helps us understand the body. Communication helps us understand how people think, feel, connect, and make decisions. Technology helps us turn ideas into tools that can reach more people.<br><br>
+      Sovereign Lab works at the connection between these areas. We explore human problems, connect different perspectives, bring people with different expertise together, and use technology to build practical solutions.
+    </p>
+
+    <p class="section-label" style="margin-top:56px;">Our Foundations</p>
 
     <div class="pillars">
       <div class="pillar">
@@ -678,7 +768,7 @@
           <path d="M18 10v8l5 3" stroke="#00D4AA" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         <h3 class="pillar-title">Body</h3>
-        <p class="pillar-body">Medicine provides a foundation for understanding the human body: how it functions, adapts, communicates, and carries the experiences of a life.</p>
+        <p class="pillar-body">Medicine provides a foundation for understanding the human body, health, and the realities people experience.</p>
       </div>
       <div class="pillar">
         <svg class="pillar-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -688,33 +778,51 @@
           <rect x="20" y="20" width="10" height="10" rx="2" stroke="#FF2D78" stroke-width="1.5"/>
         </svg>
         <h3 class="pillar-title">Mind</h3>
-        <p class="pillar-body">Human behavior, communication, emotion, and decision-making help us look beyond information and toward the person experiencing it.</p>
+        <p class="pillar-body">Human behavior, communication, emotion, and decision-making help us look beyond information and understand the person behind it.</p>
       </div>
       <div class="pillar">
         <svg class="pillar-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 8C14 8 10 12 10 16c0 5 4 8 8 12 4-4 8-7 8-12 0-4-4-8-8-8Z" stroke="#00D4AA" stroke-width="1.5"/>
-          <circle cx="18" cy="16" r="3" stroke="#00D4AA" stroke-width="1.5"/>
+          <circle cx="10" cy="18" r="4" stroke="#00D4AA" stroke-width="1.5"/>
+          <circle cx="26" cy="10" r="4" stroke="#00D4AA" stroke-width="1.5"/>
+          <circle cx="26" cy="26" r="4" stroke="#00D4AA" stroke-width="1.5"/>
+          <path d="M13.5 16.5 22.5 11.5M13.5 19.5 22.5 24.5" stroke="#00D4AA" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <h3 class="pillar-title">Expression</h3>
-        <p class="pillar-body">Live observation and interaction reveal how people express themselves in real time. We translate those human moments into thoughtful, interactive experiences.</p>
+        <h3 class="pillar-title">Connection</h3>
+        <p class="pillar-body">Communication creates understanding. It helps ideas move between people, fields, and communities—and turns individual knowledge into shared action.</p>
+      </div>
+      <div class="pillar">
+        <svg class="pillar-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 6h10l-2 11h5L15 30l2-11h-5L13 6Z" stroke="#FF2D78" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="pillar-title">Technology</h3>
+        <p class="pillar-body">Technology is our multiplier. It helps useful ideas become accessible tools, personalized experiences, and solutions that can reach beyond one person at a time.</p>
       </div>
     </div>
+  </section>
 
-    <p style="margin-top:36px; max-width:720px; color:var(--muted); font-size:0.95rem; line-height:1.8;">
-      <strong style="color:var(--white); font-weight:500;">AI is the multiplier—not the foundation.</strong>
-      Our technology is built to scale human insight, make experiences more accessible, and create new ways for people to explore and understand themselves.
+  <!-- IDEA -->
+  <section class="idea-section" id="idea">
+    <p class="section-label">The Idea Behind Our Work</p>
+    <p class="idea-question">
+      What does this person need—and how can knowledge, communication, technology, and the right people come together to help?
     </p>
+    <div class="idea-body">
+      <p>We do not believe one person must know everything.</p>
+      <p>We believe meaningful progress happens when people from different fields understand one another, contribute their strengths, and build toward a shared human purpose.</p>
+    </div>
   </section>
 
   <!-- FOUNDER -->
   <section class="founder-section" id="founder">
     <div>
-     
+      <p class="founder-label">Founder</p>
+      <h2 class="founder-name">Mahesh Pathum Warnasooriya</h2>
       <p class="founder-bio">
-        Sovereign Lab began with a simple question: <strong>What becomes possible when knowledge of the human body, human behavior, live observation, and artificial intelligence are developed together rather than separately?</strong><br><br>
-        The work is shaped by gratitude—for the people who shared their time and perspectives, for the teachers and traditions that came before, and for every limitation that made creativity necessary.<br><br>
-        Hastareka was built as an early proof of the idea: a human interpretation that can move from a one-to-one experience into an accessible digital product. MCQBrain explores the same principle from another direction—using AI to support how medical students learn and reason.<br><br>
-        <br>
+        Sovereign Lab grew from a personal journey through medicine, communication, human observation, and technology.<br><br>
+        Studying medicine created a deeper interest in the human body and the problems people experience. Learning to communicate and speak created another perspective: how people think, feel, connect, make meaning, and respond to ideas. Technology opened a way to turn those interests into tools.<br><br>
+        <strong>The goal is not to become an expert in every field.</strong> It is to understand people deeply enough to recognize meaningful problems, communicate ideas clearly, connect people with different expertise, and help turn possibilities into useful solutions.<br><br>
+        I am grateful to every teacher, collaborator, community, tradition, and challenge that contributed to this journey. Sovereign Lab is an ongoing exploration—built with curiosity, guided by people, and strengthened through collaboration.<br><br>
+        <strong>මනුෂ්‍ය ප්‍රජාවට කළ පුංචි සේවයක්.</strong><br>
         A small contribution to the human community.
       </p>
     </div>
@@ -727,6 +835,17 @@
           alt="Pathum Warnasooriya — Founder, Sovereign Lab"
         />
       </div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section class="vision-section" id="vision">
+    <p class="vision-eyebrow">Our Vision</p>
+    <p class="vision-statement">To build human-centered solutions by connecting people, knowledge, communication, and technology.</p>
+    <div class="vision-lines">
+      <span>We start with <em>people.</em></span>
+      <span>We connect <em>possibilities.</em></span>
+      <span>We build <em>what helps.</em></span>
     </div>
   </section>
 
